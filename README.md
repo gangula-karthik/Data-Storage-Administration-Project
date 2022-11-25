@@ -1,4 +1,4 @@
-# OraRental-Database
+# Data Storage Administration Project
 Oracle database school project for year 1 semester 2
 the team members include 
 - Gangula Karthik 
