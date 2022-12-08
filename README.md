@@ -9,7 +9,12 @@ the team members include
 ## PART 1: ORA-ENTAL DATABASE DDL SCRIPTS
   ### Task 1: Database Table structure ✅
   ### Task 2: Create and manage constraints ✅
-  ### Task 3: Working with sequences
+  ### Task 3: Working with sequences 
+            - create sequences ✅
+            - insert data
+            - use indexes
+            - create views 
+            - create synonyms
 ## PART 2: DATA RETRIEVAL AND MANIPULATION TASKS (HARDWARELAND DATABASE)
   ### Task 1: SQL statements ✅
   ### Task 2: Exchange emails to gather report requirements
