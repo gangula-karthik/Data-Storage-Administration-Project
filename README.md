@@ -11,7 +11,7 @@ the team members include
   ### Task 2: Create and manage constraints ✅
   ### Task 3: Working with sequences 
             - create sequences ✅
-            - insert data 
+            - insert data ✅
             - use indexes
             - create views 
             - create synonyms
