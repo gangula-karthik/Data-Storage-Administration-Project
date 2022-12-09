@@ -90,3 +90,82 @@ CREATE SEQUENCE ACTOR_ID_SEQUENCE
    START WITH 1001
    NOCACHE 
    NOCYCLE;
+
+
+-- ORARENT CUSTOMERS INSERTS
+-- ROW 1
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.CURVAL, 'Wong', 'Johnny', '98806664', '3018 Bedok North Street 5 03-34', 'Singapore', 'SG', 'johnnywong27@gmail.com', '97765433')
+
+-- ROW 2
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'West', 'Kanye', '65332266', '2021 Bt Batok St 23 #04-198', 'Singapore', 'SG', 'kanyewest2005@gmail.com', '95623014')
+
+-- ROW 3
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Parker', 'Peter', '67355160', '143 Cecil Street 18-00 Gb Building', 'Singapore', 'SG', 'peterparker@yahoo.com', '88265973')
+
+-- ROW 4
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Griffin', 'Peter', '62884568', 'BLK 119 ALJUNIED AVENUE 2, #01-K4', 'Singapore', 'SG', 'petergriffin69@gmail.com', '82215107')
+
+-- ROW 5
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Tate', 'Andrew', '62743489', '101 Boon Keng Rd #06-01', 'Singapore', 'SG', 'andrewtate112@yahoo.com', '86942069')
+
+-- ROW 6
+INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
+VALUES
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Marshall', 'Bruce', '69081243', '165 Marine Parade #03-01', 'Singapore', 'SG', 'brucemarshall22@gmail.com', '98865412')
+
+
+
+-- ORARENT MOVIES INSERTS
+-- ROW 1  
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES   (TITLE_ID_SEQUENCE, 'Groundhog Day', 'A weatherman finds himself living the same day over and over again.', 'PG', 'COMEDY', '1993-02-12') 12-FEB-1993
+
+-- ROW 2
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES   (TITLE_ID_SEQUENCE.NEXTVAL, 'The Truman Show', 'An insurance salesman/adjuster discovers his entire life is actually a reality TV show.', 'PG', 'DRAMA', '1998-06-05')
+
+-- ROW 3
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Fast and Furious 9', 'Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they''ve ever encountered: his forsaken brother.', 'PG-13', 'ACTION', '2021-06-25')
+
+-- ROW 4
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'The Matrix', 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', 'R', 'ACTION', '1999-04-22')
+
+-- ROW 5
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Top Gun: Maverick', 'After more than thirty years of service as one of the Navy''s top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.', 'PG13', 'ACTION', '2022-05-27')
+
+-- ROW 6
+INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Avatar', 'A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.', 'PG13', 'ACTION', '2009-12-18')
+
+
+
+-- ORARENT MEDIA INSERTS
+-- ROW 1
+INSERT INTO ORARENT_MEDIA(MEDIA_ID,FORMAT)
+VALUES    (MEDIA_ID_SEQUENCE, 
+
+
+
+INSERT INTO ORARENT_RENTAL_HISTORY(RENTAL_DATE,RETURN_DATE)
+VALUES    ()
+
+
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    ()
+
+
+INSERT INTO ORARENT_STAR_BILLINGS(COMMENT)
+VALUES    ()
