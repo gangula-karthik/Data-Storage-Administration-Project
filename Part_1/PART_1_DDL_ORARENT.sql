@@ -126,46 +126,126 @@ VALUES
 
 
 -- ORARENT MOVIES INSERTS
--- ROW 1  
+-- ROW 1  (edit)
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES   (TITLE_ID_SEQUENCE, 'Groundhog Day', 'A weatherman finds himself living the same day over and over again.', 'PG', 'COMEDY', '1993-02-12') 12-FEB-1993
+VALUES   (TITLE_ID_SEQUENCE, 'Forrest Gump', 'Forrest Gump, while not intelligent, has accidentally been present at many historic moments, but his true love, Jenny Curran, eludes him.', 'PG13', 'DRAMA', '6-JUN-1994')
 
 -- ROW 2
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES   (TITLE_ID_SEQUENCE.NEXTVAL, 'The Truman Show', 'An insurance salesman/adjuster discovers his entire life is actually a reality TV show.', 'PG', 'DRAMA', '1998-06-05')
+VALUES   (TITLE_ID_SEQUENCE.NEXTVAL, 'The Truman Show', 'An insurance salesman/adjuster discovers his entire life is actually a reality TV show.', 'PG', 'DRAMA', '5-JUN-1998')
 
--- ROW 3
+-- ROW 3 (edit)
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Fast and Furious 9', 'Dominic Toretto and his crew battle the most skilled assassin and high-performance driver they''ve ever encountered: his forsaken brother.', 'PG-13', 'ACTION', '2021-06-25')
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Mission Impossible', 'An American agent, under false suspicion of disloyalty, must discover and expose the real spy without the help of his organization.', 'PG13', 'ACTION', '22-JUN-1996')
 
 -- ROW 4
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'The Matrix', 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', 'R', 'ACTION', '1999-04-22')
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'The Matrix', 'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.', 'R', 'ACTION', '22-APR-1999')
 
 -- ROW 5
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Top Gun: Maverick', 'After more than thirty years of service as one of the Navy''s top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.', 'PG13', 'ACTION', '2022-05-27')
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Shrek', 'After his swamp is filled with magical creatures, an ogre agrees to rescue a princess for a villainous lord in order to get his land back.', 'PG', 'COMEDY', '07-JUN-2001')
 
 -- ROW 6
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Avatar', 'A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.', 'PG13', 'ACTION', '2009-12-18')
+VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Avatar', 'A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.', 'PG13', 'ACTION', '18-DEC-2009')
 
 
 
 -- ORARENT MEDIA INSERTS
 -- ROW 1
-INSERT INTO ORARENT_MEDIA(MEDIA_ID,FORMAT)
-VALUES    (MEDIA_ID_SEQUENCE, 
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE, 'DVD', 6)
+
+-- ROW 2
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'VHS', 6)
+
+-- ROW 3
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'DVD', 5)
+
+-- ROW 4
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'VHS', 5)
+
+
+-- ROW 5
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'DVD', 4)
+
+-- ROW 6
+INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'VHS', 4)
 
 
 
-INSERT INTO ORARENT_RENTAL_HISTORY(RENTAL_DATE,RETURN_DATE)
-VALUES    ()
+-- ORARENT RENTAL HISTORY INSERTS
+-- ROW 1
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES ( 92, '01-JAN-2021', 101, '05-JAN-2021')
+   
+-- ROW 2
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES ( 93, '01-JAN-2021', 102, '05-JAN-2021')
+
+-- ROW 3
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES (94, '19-SEP-2022', 103, '22-SEP-2022')
+
+-- ROW 4
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES (95, '03-MAR-2022', 104, '07-MAR-2022')
 
 
+
+-- ORARENT ACTORS INSERTS
+-- ROW 1
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    ()
+VALUES    (ACTOR_ID_SEQUENCE, 'Tom Hanks', 'Thomas', 'Hanks', '09-JUL-1956')
+
+-- ROW 2
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Jim Carrey', 'James', 'Carrey', '17-01-1962')
+
+-- ROW 3
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Keanu Reeves', 'Keanu', 'Reeves', '02-SEP-1964')
+
+-- ROW 4
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Sam Worthington', 'Samuel', 'Worthington', '02-08-1976')
+
+-- ROW 5
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Eddie Murphy', 'Edward', 'Murphy', '03-APR-1961')
+
+-- ROW 6
+INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Tom Cruise', 'Thomas', 'Cruise', '03-JUL-1962')
 
 
-INSERT INTO ORARENT_STAR_BILLINGS(COMMENT)
-VALUES    ()
+-- ORARENT STAR BILLINGS INSERTS
+-- ROW 1  (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1001, 1, 'Tom Hanks plays the role of Forrest Gump')
+
+-- ROW 2 (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1002, 2, 'Jim Carrey plays the role of truman Burbank')
+
+-- ROW 3 (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1003, 4, 'Keanu Reeves plays the role of Neo')
+
+-- ROW 4 (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1004, 6, 'Sam Worthington plays the role of Jake Sully')
+
+-- ROW 5 (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1005, 5, 'Eddie Murphy plays the role of Donkey in shrek')
+
+-- ROW 6 (correct)
+INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
+VALUES  (1006, 3, 'Tom Cruise plays the role of Ethan Hunt')
