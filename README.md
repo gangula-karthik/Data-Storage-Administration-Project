@@ -15,6 +15,7 @@ the team members include
             - use indexes
             - create views 
             - create synonyms
+  ### Do documentation (fill out the template)
 ## PART 2: DATA RETRIEVAL AND MANIPULATION TASKS (HARDWARELAND DATABASE)
   ### Task 1: SQL statements ✅
-  ### Task 2: Exchange emails to gather report requirements
+  ### Task 2: Send out emails to the teacher
