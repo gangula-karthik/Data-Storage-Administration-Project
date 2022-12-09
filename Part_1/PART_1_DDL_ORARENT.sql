@@ -248,4 +248,4 @@ VALUES  (1005, 5, 'Eddie Murphy plays the role of Donkey in shrek')
 
 -- ROW 6 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1006, 3, 'Tom Cruise plays the role of Ethan Hunt')
+VALUES  (1006, 3, 'Tom Cruise plays the role of Ethan Hunt');
