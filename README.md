@@ -13,8 +13,8 @@ the team members include
             - create sequences ✅
             - insert data ✅
             - use indexes ✅
-            - create views 
-            - create synonyms
+            - create views ✅
+            - create synonyms ✅
   ### Do documentation (fill out the template)
 ## PART 2: DATA RETRIEVAL AND MANIPULATION TASKS (HARDWARELAND DATABASE)
   ### Task 1: SQL statements ✅
