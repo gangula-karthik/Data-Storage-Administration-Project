@@ -12,7 +12,7 @@ the team members include
   ### Task 3: Working with sequences 
             - create sequences ✅
             - insert data ✅
-            - use indexes
+            - use indexes ✅
             - create views 
             - create synonyms
   ### Do documentation (fill out the template)
