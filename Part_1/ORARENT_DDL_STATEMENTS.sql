@@ -91,6 +91,20 @@ CREATE SEQUENCE ACTOR_ID_SEQUENCE
 
 
 
--- creating indexes 
+-- creating indexes on the last_name column of the Customers table.
 CREATE INDEX ORARENT_CUSTOMERS_LAST_NAME_IDX 
 ON ORARENT_CUSTOMERS(LAST_NAME);
+
+
+
+-- Create a view called TITLE_UNAVAIL to show the movie titles and media_id of the media not returned yet. The view should not allow any DML operations.
+CREATE VIEW TITLE_UNAVAIL AS
+SELECT TITLE, MEDIA_ID
+FROM ORARENT_MEDIA
+WHERE MEDIA_ID NOT IN (SELECT MEDIA_ID FROM ORARENT_RENTAL_HISTORY WHERE RETURN_DATE IS NULL)
+WITH READ ONLY;
+
+
+-- Create a synonym for the TITLE_UNAVAIL view.
+CREATE PUBLIC SYNONYM TITLE_UNAVAIL 
+FOR TITLE_UNAVAIL;
