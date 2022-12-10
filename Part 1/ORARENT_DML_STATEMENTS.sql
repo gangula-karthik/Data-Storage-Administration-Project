@@ -2,7 +2,7 @@
 -- ROW 1
 INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
 VALUES
-   (CUSTOMER_ID_SEQUENCE.CURVAL, 'Wong', 'Johnny', '98806664', '3018 Bedok North Street 5 03-34', 'Singapore', 'SG', 'johnnywong27@gmail.com', '97765433');
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Wong', 'Johnny', '62343213', '3018 Bedok North Street 5 03-34', 'Singapore', 'SG', 'johnnywong27@gmail.com', '97765433');
 
 -- ROW 2
 INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
@@ -22,20 +22,25 @@ VALUES
 -- ROW 5
 INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
 VALUES
-   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Tate', 'Andrew', '22743489', '101 Boon Keng Rd #06-01', 'Singapore', 'SG', 'andrewtate112@yahoo.com', '86942069');
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Tate', 'Andrew', '62743489', '101 Boon Keng Rd #06-01', 'Singapore', 'SG', 'andrewtate112@yahoo.com', '86942069');
 
 -- ROW 6
 INSERT INTO ORARENT_CUSTOMERS(CUSTOMER_ID, LAST_NAME, FIRST_NAME, HOME_PHONE, ADDRESS, CITY, STATE, EMAIL, CELL_PHONE)
 VALUES
-   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Marshall', 'Bruce', '49081243', '165 Marine Parade #03-01', 'Singapore', 'SG', 'brucemarshall22@gmail.com', '98865412');
+   (CUSTOMER_ID_SEQUENCE.NEXTVAL, 'Marshall', 'Bruce', '62743289', '165 Marine Parade #03-01', 'Singapore', 'SG', 'brucemarshall22@gmail.com', '98865412');
 
+
+-- alter orarent_customers homephone value where first_name = 'Andrew' to '62743489'
+UPDATE ORARENT_CUSTOMERS
+SET HOME_PHONE = '69081243'
+WHERE FIRST_NAME = 'Bruce';
 
 
 
 -- ORARENT MOVIES INSERTS
 -- ROW 1  (edit)
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
-VALUES   (TITLE_ID_SEQUENCE, 'Forrest Gump', 'Forrest Gump, while not intelligent, has accidentally been present at many historic moments, but his true love, Jenny Curran, eludes him.', 'PG13', 'DRAMA', '6-JUN-1994');
+VALUES   (TITLE_ID_SEQUENCE.NEXTVAL, 'Forrest Gump', 'Forrest Gump, while not intelligent, has accidentally been present at many historic moments, but his true love, Jenny Curran, eludes him.', 'PG13', 'DRAMA', '6-JUN-1994');
 
 -- ROW 2
 INSERT INTO ORARENT_MOVIES(TITLE_ID,TITLE,DESCRIPTION,RATING,CATEGORY,RELEASE_DATE)
@@ -63,7 +68,7 @@ VALUES  (TITLE_ID_SEQUENCE.NEXTVAL, 'Avatar', 'A paraplegic marine dispatched to
 -- ORARENT MEDIA INSERTS
 -- ROW 1
 INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
-VALUES  (MEDIA_ID_SEQUENCE, 'DVD', 6);
+VALUES  (MEDIA_ID_SEQUENCE.NEXTVAL, 'DVD', 6);
 
 -- ROW 2
 INSERT INTO ORARENT_MEDIA(MEDIA_ID, FORMAT, TITLE_ID)
@@ -106,59 +111,65 @@ INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DA
 VALUES (95, '03-MAR-2022', 104, '07-MAR-2022');
 
 
+-- ROW 5 
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES (92, '09-DEC-2022', 105, NULL);
+
+-- ROW 6
+INSERT INTO ORARENT_RENTAL_HISTORY(MEDIA_ID, RENTAL_DATE, CUSTOMER_ID, RETURN_DATE)
+VALUES (95, '09-DEC-2022', 105, NULL);
+
 
 
 -- ORARENT ACTORS INSERTS
 -- ROW 1
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE, 'Tom Hanks', 'Thomas', 'Hanks', '09-JUL-1956');
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Tom Hanks', 'Thomas', 'Hanks', '09-Jul-1956');
 
 -- ROW 2
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Jim Carrey', 'James', 'Carrey', '17-01-1962')；
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Jim Carrey', 'James', 'Carrey', '17-Jan-1962');
 
 -- ROW 3
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Keanu Reeves', 'Keanu', 'Reeves', '02-SEP-1964')；
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Keanu Reeves', 'Keanu', 'Reeves', '02-Sep-1964');
 
 -- ROW 4
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Sam Worthington', 'Samuel', 'Worthington', '02-08-1976')；
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Sam Worthington', 'Samuel', 'Worthington', '02-Aug-1976');
 
 -- ROW 5
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Eddie Murphy', 'Edward', 'Murphy', '03-APR-1961')；
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Eddie Murphy', 'Edward', 'Murphy', '03-Apr-1961');
 
 -- ROW 6
 INSERT INTO ORARENT_ACTORS(ACTOR_ID,STAGE_NAME,FIRST_NAME,LAST_NAME,BIRTH_DATE)
-VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Tom Cruise', 'Thomas', 'Cruise', '03-JUL-1962')；
+VALUES    (ACTOR_ID_SEQUENCE.NEXTVAL, 'Tom Cruise', 'Thomas', 'Cruise', '03-Jul-1962');
 
 
 
 
 -- ORARENT STAR BILLINGS INSERTS
--- ROW 1  (correct)
+-- ROW 1 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1001, 1, 'Tom Hanks plays the role of Forrest Gump')；
+VALUES  (1001, 1, 'Tom Hanks plays the role of Forrest Gump');
 
 -- ROW 2 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1002, 2, 'Jim Carrey plays the role of truman Burbank');
+VALUES  (1002, 2, 'Jim Carrey is Truman Burbank');
 
 -- ROW 3 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1003, 4, 'Keanu Reeves plays the role of Neo');
+VALUES  (1003, 4, 'Keanu Reeves is Neo in The Matrix');
 
 -- ROW 4 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1004, 6, 'Sam Worthington plays the role of Jake Sully');
+VALUES  (1004, 6, 'Sam Worthington is Jake Sully in Avatar');
 
 -- ROW 5 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1005, 5, 'Eddie Murphy plays the role of Donkey in shrek');
+VALUES  (1005, 5, 'Eddie Murphy is Donkey in Shrek');
 
 -- ROW 6 (correct)
 INSERT INTO ORARENT_STAR_BILLINGS(ACTOR_ID, TITLE_ID, COMMENTS)
-VALUES  (1006, 3, 'Tom Cruise plays the role of Ethan Hunt');
-
-
+VALUES  (1006, 3, 'Tom Cruise is Ethan Hunt');
