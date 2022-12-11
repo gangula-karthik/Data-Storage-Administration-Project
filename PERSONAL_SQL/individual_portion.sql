@@ -60,3 +60,19 @@ WHERE CUSTOMER_ID IN (SELECT CUSTOMER_ID
                       HAVING COUNT(ORDER_ID) > 4);
 
 -- JAY SQL STATEMENTS
+
+--Qn 1
+--Sophia Reynolds has been promoted to Sales Manager and reporting to Tommy Bailey, please update her job title and manager in the database accordingly.
+UPDATE HWL_EMPLOYEES
+SET JOB_TITLE = 'Sales Manager' ,
+MANAGER_ID = (SELECT EMPLOYEE_ID
+FROM HWL_employees
+WHERE FIRST_NAME LIKE 'Tommy' AND LAST_NAME LIKE 'Bailey')
+WHERE FIRST_NAME LIKE 'Sophia' AND LAST_NAME LIKE 'Reynolds';
+
+--QN 2
+--Retrieve the list of our employees whose job title is Shipping Clerk. The data column in the report should be displayed in this sequence, First Name, Last Name, Hire Date, Salary and Manager Name
+
+SELECT e.first_name , e.last_name , e.hire_date , e.salary , m.first_name ||' '|| m.last_name AS "Manager Name"
+FROM HWL_employees e JOIN HWL_employees m ON (e.manager_id = m.employee_id)
+WHERE e.JOB_TITLE LIKE 'Shipping Clerk';
