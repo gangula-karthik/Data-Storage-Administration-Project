@@ -42,8 +42,6 @@ AND LAST_NAME = 'Perry')
 WHERE FIRST_NAME = 'Hannah'
 AND LAST_NAME = 'Knight';
 
-SELECT * FROM HWL_EMPLOYEES;
-
 
 
 
