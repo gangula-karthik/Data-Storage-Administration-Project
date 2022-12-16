@@ -98,21 +98,10 @@ CREATE SEQUENCE ACTOR_ID_SEQUENCE
    NOCACHE 
    NOCYCLE;
 
--- create a test table with one column that is a primary key
-CREATE TABLE TEST_TABLE
-  ( TEST_ID NUMBER(10), 
-    CONSTRAINT test_id_pk PRIMARY KEY(TEST_ID)
-);
-
-
 
 -- creating indexes on the last_name column of the Customers table.
-CREATE INDEX ORARENT_CUSTOMERS_LAST_NAME_IDX 
+CREATE INDEX CUSTOMERS_LAST_NAME_IDX 
 ON ORARENT_CUSTOMERS(LAST_NAME);
-
--- how to verify that the index was created?
-SELECT * FROM USER_INDEXES WHERE TABLE_NAME = 'ORARENT_CUSTOMERS';
-
 
 -- Create a view called TITLE_UNAVAIL to show the movie titles and media_id of the media not returned yet. The view should not allow any DML operations.
 CREATE VIEW TITLE_UNAVAIL AS
@@ -121,15 +110,6 @@ FROM ORARENT_MEDIA NATURAL JOIN ORARENT_MOVIES
 WHERE MEDIA_ID IN (SELECT MEDIA_ID FROM ORARENT_RENTAL_HISTORY WHERE RETURN_DATE IS NULL)
 WITH READ ONLY;
 
--- verify that the view was created
-SELECT * FROM TITLE_UNAVAIL;
-SELECT * FROM USER_VIEWS WHERE VIEW_NAME = 'TITLE_UNAVAIL';
-
-
-
 -- Create a synonym for the TITLE_UNAVAIL view.
-CREATE PUBLIC SYNONYM MOVIES_ON_LOAN
+CREATE SYNONYM MOVIES_ON_LOAN
 FOR TITLE_UNAVAIL;
-
--- verify that the synonym was created
-SELECT * FROM USER_SYNONYMS WHERE SYNONYM_NAME = 'MOVIES_ON_LOAN';
