@@ -17,3 +17,10 @@ where table_name like 'ORARENT_%' and constraint_type = 'R';
 SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, DATA_LENGTH, NULLABLE
 FROM all_tab_columns
 WHERE table_name LIKE 'ORARENT_%';  
+
+
+-- SQL STATEMENT TO VERIFY CHECK CONSTRAINTS
+SELECT constraint_name, constraint_type, search_condition
+FROM all_constraints
+WHERE table_name = 'ORARENT_MOVIES'
+AND constraint_type = 'C';
